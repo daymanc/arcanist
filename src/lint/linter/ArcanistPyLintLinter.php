@@ -196,6 +196,20 @@ final class ArcanistPyLintLinter extends ArcanistLinter {
     return 'PyLint';
   }
 
+  /**
+  *
+  * daymanc: Add getLinterConfigurationName() to resolve:
+  *          https://secure.phabricator.com/T5222
+  *
+  * root@vizzini:/var/lib/arcanist# arc linters
+  * # Usage Exception: Linter 'pylint' specifies invalid type 'pylint'. Available linters are: csharp, chmod, commit, filename, phutil-xhpast, xhpast, csslint, gjslint, coffeelint, cppcheck, cpplint, flake8, golint, hlint, jshint, jsonlint, jscs, lessc, pep8, php, phpcs, puppet-lint, pyflakes, ruby, generated, json, merge-conflict, nolint, phutil-library, script-and-regex, spelling, text, xml.
+  *
+  **/
+  
+  public function getLinterConfigurationName() {
+    return 'pylint';
+  }
+
   private function getLinterVersion() {
     $pylint_bin = $this->getPyLintPath();
     $options = '--version';

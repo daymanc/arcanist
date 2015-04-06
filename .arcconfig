@@ -1,7 +1,19 @@
 {
   "project.name" : "arcanist",
-  "phabricator.uri" : "https://secure.phabricator.com/",
-  "unit.engine" : "PhutilUnitTestEngine",
+  "phabricator.uri" : "https://vizzini.piston.cc/",
+
+  "lint.linter": "ArcanistPyLintLinter",
+
+  "lint.engine": "ArcanistConfigurationDrivenLintEngine",
+
+  "lint.pylint.prefix" : "/usr/local",
+  "lint.pylint.codes.error": "^(E|F).*",
+  "lint.pylint.codes.warning": "^(W|R).*",
+  "lint.pylint.codes.advice": "^C.*",
+  "lint.pylint.rcfile": "/home/daymanc/savage/.pylintrc",
+
+  "unit.engine": "NoseTestEngine",
+
   "load" : [
     "src/"
   ]

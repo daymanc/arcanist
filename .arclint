@@ -4,6 +4,10 @@
     "(\\.lint-test$)"
   ],
   "linters": {
+    "pylint": {
+      "type": "pylint",
+      "include": "(.*\\.py$)"
+    },
     "chmod": {
       "type": "chmod"
     },
